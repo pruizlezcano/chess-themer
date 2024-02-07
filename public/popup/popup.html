@@ -1,0 +1,29 @@
+<!-- popup.html -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    </style>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body>
+    <h1>Chess Themer</h1>
+    <div class="form">
+      <div>
+        <label for="pieces">Pieces:</label>
+        <select name="pieceSelector" id="pieceSelector"></select>
+      </div>
+      <div>
+        <label for="board">Board:</label>
+        <select name="boardSelector" id="boardSelector"></select>
+      </div>
+      <button id="changeTheme">Save</button>
+    </div>
+    <div id="preview-wrapper">
+      <div id="preview"></div>
+    </div>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
