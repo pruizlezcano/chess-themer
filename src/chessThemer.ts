@@ -1,5 +1,5 @@
-import { getBoardURL, getPieceURL } from './utils';
 import browser from 'webextension-polyfill';
+import { getBoardURL, getPieceURL } from './utils';
 
 /**
  * Change the board in Lichess.

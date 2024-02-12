@@ -1,6 +1,6 @@
-import { getBoardURL, getPieceURL } from './utils';
-import { themes } from './themes';
 import browser from 'webextension-polyfill';
+import { themes } from './themes';
+import { getBoardURL, getPieceURL } from './utils';
 
 /**
  * Change the preview image.
@@ -122,9 +122,14 @@ boardSelector.addEventListener('change', async function (e) {
   changePreview(pieceSelector.value, boardSelector.value);
 });
 
-document
-  .getElementById('changeTheme')!
-  .addEventListener('click', async function (e) {
-    e.preventDefault();
-    await changeTheme(pieceSelector.value, boardSelector.value);
-  });
+const saveButton = document.getElementById('saveButton')!;
+
+saveButton.addEventListener('click', async function (e) {
+  e.preventDefault();
+  await changeTheme(pieceSelector.value, boardSelector.value);
+  saveButton.innerHTML =
+    '<span class="emoji">🎉</span>Saved!<span class="emoji">🎉</span>';
+  setTimeout(() => {
+    saveButton.innerText = 'Save';
+  }, 1000);
+});
