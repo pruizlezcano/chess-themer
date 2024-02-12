@@ -2,9 +2,10 @@
   "manifest_version": 3,
   "name": "Chess Themer",
   "author": "Pablo Ruiz",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Unify and personalize your chess experience across Chess.com and Lichess.org with seamless theme synchronization. ",
-  "permissions": ["storage", "tabs", "activeTab"],
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://lichess.org/*", "*://www.chess.com/*"],
   "action": {
     "default_icon": {
       "48": "icons/48x48.png",
@@ -14,7 +15,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "chessthemer@pruizlezcano"
+      "id": "chess-themer@pruizlezcano"
     }
   },
   "icons": {
@@ -25,12 +26,6 @@
     {
       "matches": ["*://lichess.org/*", "*://www.chess.com/*"],
       "js": ["js/chessThemer.js"]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["themes/**"],
-      "matches": ["*://lichess.org/*", "*://www.chess.com/*"]
     }
   ]
 }
