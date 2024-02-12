@@ -1,7 +1,13 @@
 name: Deploy to GitHub Pages 🚀
-on: [push]
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
