@@ -24,7 +24,24 @@ const lichessPieces = (theme: string): void => {
       !classList.contains('ghost') &&
       (classList.contains('white') || classList.contains('black'))
     ) {
-      const pieceName = [...classList].map((c) => c[0]).join('');
+      const nameRelation: { [key: string]: string } = {
+        black: 'b',
+        white: 'w',
+        pawn: 'p',
+        knight: 'n',
+        bishop: 'b',
+        rook: 'r',
+        queen: 'q',
+        king: 'k',
+      };
+      const pieceName = [...classList]
+        .sort(
+          (a, b) =>
+            Object.keys(nameRelation).indexOf(a) -
+            Object.keys(nameRelation).indexOf(b),
+        )
+        .map((c: string) => nameRelation[c])
+        .join('');
       piece.style.backgroundImage = `url('${getPieceURL(theme, pieceName)}')`;
     }
   }

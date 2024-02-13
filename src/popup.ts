@@ -83,7 +83,7 @@ export const changeTheme = async (
     board,
   });
   const tabs = await browser.tabs.query({
-    url: ['*://*.chess.com/*', '*://*.lichess.org/*'],
+    url: ['*://lichess.org/*', '*://www.chess.com/*'],
   });
   for (const tab of tabs) {
     await browser.tabs.sendMessage(tab.id!, {
