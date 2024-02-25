@@ -6,11 +6,11 @@ const srcDir = path.join(__dirname, '..', 'src');
 module.exports = {
   mode: 'production',
   entry: {
-    chessThemer: path.join(srcDir, 'chessThemer.ts'),
-    popup: path.join(srcDir, 'popup.ts'),
+    'js/chessThemer': path.join(srcDir, 'chessThemer.ts'),
+    'js/popup': path.join(srcDir, 'popup.ts'),
   },
   output: {
-    path: path.join(__dirname, '../dist/js'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name].js',
   },
   module: {
@@ -30,8 +30,7 @@ module.exports = {
       patterns: [
         {
           from: '.',
-          globOptions: { ignore: ['**/chess-themer/**'] },
-          to: '../',
+          globOptions: { ignore: ['**/chess-themer/**', '**/manifest/**'] },
           context: 'public',
         },
       ],
