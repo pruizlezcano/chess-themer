@@ -8,6 +8,7 @@ class ChessCom extends Site {
   }
 
   changeBoard(theme: string): void {
+    this.boardTheme = theme;
     const board: HTMLElement | null = document.querySelector('wc-chess-board');
     if (board != null)
       board.style.backgroundImage = `url('${getBoardURL(theme)}')`;
@@ -19,6 +20,7 @@ class ChessCom extends Site {
   }
 
   changePieces(theme: string): void {
+    this.piecesTheme = theme;
     const pieces: NodeListOf<HTMLElement> = document.querySelectorAll('.piece');
     const pieceNames = [
       'wp',
