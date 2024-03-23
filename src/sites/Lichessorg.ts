@@ -8,6 +8,7 @@ class Lichessorg extends Site {
   }
 
   changeBoard(theme: string): void {
+    this.boardTheme = theme;
     const boards: NodeListOf<HTMLElement> =
       document.querySelectorAll('cg-board');
     for (const board of boards) {
@@ -17,6 +18,7 @@ class Lichessorg extends Site {
   }
 
   changePieces(theme: string): void {
+    this.piecesTheme = theme;
     const pieces: NodeListOf<HTMLElement> = document.querySelectorAll('piece');
     for (const piece of pieces) {
       const classList = piece.classList;
