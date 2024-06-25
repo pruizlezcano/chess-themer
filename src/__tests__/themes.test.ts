@@ -4,19 +4,6 @@ import fs from 'fs';
 
 const THEMES_PATH = './public/chess-themer';
 
-describe('Print directory', () => {
-  it('Print directory', () => {
-    const pieces = fs.readdirSync(`${THEMES_PATH}/pieces/`, {
-      withFileTypes: true,
-    });
-    console.log(pieces);
-    const tree = fs.readdirSync(`${THEMES_PATH}/pieces/neo`, {
-      withFileTypes: true,
-    });
-    console.log(tree);
-  });
-});
-
 describe('Board themes', () => {
   for (const boardTheme of themes.boards) {
     it(`Board theme '${boardTheme.name}' should exists in folder`, () => {
