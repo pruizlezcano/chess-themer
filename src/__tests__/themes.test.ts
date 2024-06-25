@@ -19,18 +19,18 @@ describe('Piece themes', () => {
   for (const pieceTheme of themes.pieces) {
     describe(`Theme: ${pieceTheme.name}`, () => {
       const pieces = [
-        'bB',
-        'bK',
-        'bN',
-        'bP',
-        'bQ',
-        'bR',
-        'wB',
-        'wK',
-        'wN',
-        'wP',
-        'wQ',
-        'wR',
+        'bb',
+        'bk',
+        'bn',
+        'bp',
+        'bq',
+        'br',
+        'wb',
+        'wk',
+        'wn',
+        'wp',
+        'wq',
+        'wr',
       ];
       for (const piece of pieces) {
         it(`Piece '${piece}' should exist in the folder for theme '${pieceTheme.name}'`, () => {
