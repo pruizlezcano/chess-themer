@@ -2,7 +2,7 @@ import { themes } from '../themes';
 import { describe, expect, it } from 'vitest';
 import fs from 'fs';
 
-const THEMES_PATH = './';
+const THEMES_PATH = './public/chess-themer';
 
 describe('Print directory', () => {
   it('Print directory', () => {
@@ -11,16 +11,16 @@ describe('Print directory', () => {
   });
 });
 
-// describe('Board themes', () => {
-//   for (const boardTheme of themes.boards) {
-//     it(`Board theme '${boardTheme.name}' should exists in folder`, () => {
-//       const file = fs.existsSync(
-//         `${THEMES_PATH}/boards/${boardTheme.name}/200.png`,
-//       );
-//       expect(file).toBeTruthy();
-//     });
-//   }
-// });
+describe('Board themes', () => {
+  for (const boardTheme of themes.boards) {
+    it(`Board theme '${boardTheme.name}' should exists in folder`, () => {
+      const file = fs.existsSync(
+        `${THEMES_PATH}/boards/${boardTheme.name}/200.png`,
+      );
+      expect(file).toBeTruthy();
+    });
+  }
+});
 
 // describe('Piece themes', () => {
 //   for (const pieceTheme of themes.pieces) {
