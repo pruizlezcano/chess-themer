@@ -2,7 +2,7 @@ import { themes } from '../themes';
 import { describe, expect, it } from 'vitest';
 import fs from 'fs';
 
-const THEMES_PATH = './public/chess-themer';
+const THEMES_PATH = 'public/chess-themer';
 
 describe('Board themes', () => {
   for (const boardTheme of themes.boards) {
