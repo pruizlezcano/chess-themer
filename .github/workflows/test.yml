@@ -21,4 +21,4 @@ jobs:
 
       - name: pnpm test
         run: |
-          pnpm test run
+          pnpm test
