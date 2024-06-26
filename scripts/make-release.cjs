@@ -11,7 +11,7 @@ const packageJson = JSON.parse(fs.readFileSync(`${root}/package.json`));
 const latestVersion = packageJson.version;
 const packageName = packageJson.name;
 
-const releaseDir = `${releasesPath}/${latestVersion}`;
+const releaseDir = `${releasesPath}`;
 const sourceDir = `${releaseDir}/source`;
 
 if (fs.existsSync(releaseDir)) {
