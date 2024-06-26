@@ -13,7 +13,17 @@ class Lichessorg extends Site {
       document.querySelectorAll('cg-board');
     for (const board of boards) {
       board.style.backgroundImage = `url('${getBoardURL(theme)}')`;
+      board.style.top = '0';
+      board.style.left = '0';
+      board.style.width = '100%';
+      board.style.height = '100%';
+      board.style.position = 'absolute';
+      board.style.backgroundSize = 'cover';
+      board.style.borderRadius = 'inherit';
+      board.style.boxShadow = 'inherit';
     }
+    const body = document.querySelector('body');
+    body?.setAttribute('data-board', 'chess-themer');
     this.boardTheme = theme;
   }
 
