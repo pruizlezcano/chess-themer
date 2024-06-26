@@ -45,13 +45,13 @@ Download the latest Chess Themer [build](https://github.com/pruizlezcano/chess-t
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   pnpm install
    ```
 3. Build and package the extension
    ```sh
-   npm run package
+   pnpm release
    ```
-4. A new folder `web-ext-artifacts` is generated containing the extension build
+4. A new folder `release` is generated containing the extension build for each browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,13 +75,14 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Theme Branch (`git checkout -b theme/AmazingTheme`)
-3. Add the images to `public/chess-themer/`
+3. Add the images to `public/themes/`
   - `boards`: The board image should be named `200.png` and the recommended dimensions are `1600x1600`
   - `pieces`: Each piece should be named with two letters `<color><piece>.png` for **b**lack, **w**hite, **p**awn, **b**ishop, k**n**ight, **r**ook, **q**ueen, **k**ing and the recommended dimensions are `150x150`
 4. Add the entry in `src/themes.ts`
-5. Commit your Changes (`git commit -m 'feat(theme): Added theme AmazingTheme'`)
-6. Push to the Branch (`git push origin theme/AmazingTheme`)
-7. Open a Pull Request
+5. Run the tests (`pnpm test`)
+6. Commit your Changes (`git commit -m 'feat(theme): Added theme AmazingTheme'`)
+7. Push to the Branch (`git push origin theme/AmazingTheme`)
+8. Open a Pull Request
 
 > if the name exist you can append `@yourname` so the folder name will be `amazing-theme@yourname`
 
