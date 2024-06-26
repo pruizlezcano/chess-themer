@@ -19,4 +19,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public/chess-themer # The folder the action should deploy.
+          folder: public/themes # The folder the action should deploy.

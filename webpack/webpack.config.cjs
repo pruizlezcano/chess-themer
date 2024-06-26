@@ -30,7 +30,7 @@ module.exports = {
       patterns: [
         {
           from: '.',
-          globOptions: { ignore: ['**/chess-themer/**', '**/manifest/**'] },
+          globOptions: { ignore: ['**/themes/**', '**/manifest/**'] },
           context: 'public',
         },
       ],
