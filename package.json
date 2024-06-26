@@ -1,6 +1,6 @@
 {
   "name": "chess-themer",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Unify and personalize your chess experience across Chess.com and Lichess.org with seamless theme synchronization.",
   "main": "src/chessThemer.ts",
   "scripts": {

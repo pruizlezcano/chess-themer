@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chess Themer",
   "author": "Pablo Ruiz",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Unify and personalize your chess experience across Chess.com and Lichess.org with seamless theme synchronization. ",
   "permissions": ["storage", "tabs"],
   "host_permissions": ["*://lichess.org/*", "*://www.chess.com/*"],
